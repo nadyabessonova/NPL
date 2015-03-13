@@ -1,0 +1,25 @@
+Australia	381016.23
+Austria	208346.81
+Belgium	416379.79
+Brazil	198675.64
+Canada	90875.03
+Costa Rica	567544.9
+Denmark	3334.1
+Finland	141985.63
+France	146249.4
+Iceland	289447.15
+Ireland	649337.39
+Israel	476574.41
+Luxembourg	579780.41
+Mexico	729915.23
+Netherlands	30384.08
+New Zealand	644804.24
+Norway	7642.3
+Oman	262166.11
+Panama	729918.93
+Sweden	54321.99
+Switzerland	15666.87
+United Arab Emirates	700645.25
+United Kingdom	335899.92
+United States	702524.8
+Venezuela	499894.47
