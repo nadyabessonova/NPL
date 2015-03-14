@@ -1,1 +1,148 @@
-hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/hadoop-streaming.jar -input /input -output /users/adverts -mapper "python map.py" -reducer "python reduce.py" -file map.py -file reduce.py
+hdfs@ip-172-31-7-93:/mnt$ hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/hadoop-streaming.jar -input /input -output /users/adverts -mapper "python map.py" -reducer "python reduce.py" -file map.py -file reduce.py
+15/03/13 18:57:11 WARN streaming.StreamJob: -file option is deprecated, please use generic option -files instead.
+packageJobJar: [map.py, reduce.py] [/opt/cloudera/parcels/CDH-5.3.2-1.cdh5.3.2.p0.10/jars/hadoop-streaming-2.5.0-cdh5.3.2.jar] /tmp/streamjob917583914537605647.jar tmpDir=null
+15/03/13 18:57:13 INFO client.RMProxy: Connecting to ResourceManager at ip-172-31-7-92.eu-west-1.compute.internal/172.31.7.92:8032
+15/03/13 18:57:13 INFO client.RMProxy: Connecting to ResourceManager at ip-172-31-7-92.eu-west-1.compute.internal/172.31.7.92:8032
+15/03/13 18:57:14 WARN security.UserGroupInformation: PriviledgedActionException as:hdfs (auth:SIMPLE) cause:org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory hdfs://ip-172-31-7-92.eu-west-1.compute.internal:8020/users/adverts already exists
+15/03/13 18:57:14 WARN security.UserGroupInformation: PriviledgedActionException as:hdfs (auth:SIMPLE) cause:org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory hdfs://ip-172-31-7-92.eu-west-1.compute.internal:8020/users/adverts already exists
+15/03/13 18:57:14 ERROR streaming.StreamJob: Error Launching job : Output directory hdfs://ip-172-31-7-92.eu-west-1.compute.internal:8020/users/adverts already exists
+Streaming Command Failed!
+hdfs@ip-172-31-7-93:/mnt$ hadoop fs -rm -r -f /users/adverts 
+15/03/13 18:57:25 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ip-172-31-7-92.eu-west-1.compute.internal:8020/users/adverts' to trash at: hdfs://ip-172-31-7-92.eu-west-1.compute.internal:8020/user/hdfs/.Trash/Current
+hdfs@ip-172-31-7-93:/mnt$ hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/hadoop-streaming.jar -input /input -output /users/adverts -mapper "python map.py" -reducer "python reduce.py" -file map.py -file reduce.py
+15/03/13 18:57:35 WARN streaming.StreamJob: -file option is deprecated, please use generic option -files instead.
+packageJobJar: [map.py, reduce.py] [/opt/cloudera/parcels/CDH-5.3.2-1.cdh5.3.2.p0.10/jars/hadoop-streaming-2.5.0-cdh5.3.2.jar] /tmp/streamjob3824914289571594486.jar tmpDir=null
+15/03/13 18:57:37 INFO client.RMProxy: Connecting to ResourceManager at ip-172-31-7-92.eu-west-1.compute.internal/172.31.7.92:8032
+15/03/13 18:57:37 INFO client.RMProxy: Connecting to ResourceManager at ip-172-31-7-92.eu-west-1.compute.internal/172.31.7.92:8032
+15/03/13 18:57:38 INFO mapred.FileInputFormat: Total input paths to process : 1
+15/03/13 18:57:38 INFO mapreduce.JobSubmitter: number of splits:15
+15/03/13 18:57:38 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1426254459012_0008
+15/03/13 18:57:39 INFO impl.YarnClientImpl: Submitted application application_1426254459012_0008
+15/03/13 18:57:39 INFO mapreduce.Job: The url to track the job: http://ip-172-31-7-92.eu-west-1.compute.internal:8088/proxy/application_1426254459012_0008/
+15/03/13 18:57:39 INFO mapreduce.Job: Running job: job_1426254459012_0008
+15/03/13 18:57:54 INFO mapreduce.Job: Job job_1426254459012_0008 running in uber mode : false
+15/03/13 18:57:54 INFO mapreduce.Job:  map 0% reduce 0%
+15/03/13 18:58:07 INFO mapreduce.Job:  map 4% reduce 0%
+15/03/13 18:58:09 INFO mapreduce.Job:  map 7% reduce 0%
+15/03/13 18:58:10 INFO mapreduce.Job:  map 9% reduce 0%
+15/03/13 18:58:11 INFO mapreduce.Job:  map 15% reduce 0%
+15/03/13 18:58:13 INFO mapreduce.Job:  map 17% reduce 0%
+15/03/13 18:58:14 INFO mapreduce.Job:  map 21% reduce 0%
+15/03/13 18:58:16 INFO mapreduce.Job:  map 22% reduce 0%
+15/03/13 18:58:17 INFO mapreduce.Job:  map 31% reduce 0%
+15/03/13 18:58:18 INFO mapreduce.Job:  map 33% reduce 0%
+15/03/13 18:58:22 INFO mapreduce.Job:  map 37% reduce 0%
+15/03/13 18:58:24 INFO mapreduce.Job:  map 40% reduce 0%
+15/03/13 18:58:33 INFO mapreduce.Job:  map 42% reduce 0%
+15/03/13 18:58:34 INFO mapreduce.Job:  map 46% reduce 0%
+15/03/13 18:58:35 INFO mapreduce.Job:  map 48% reduce 0%
+15/03/13 18:58:36 INFO mapreduce.Job:  map 50% reduce 0%
+15/03/13 18:58:37 INFO mapreduce.Job:  map 57% reduce 0%
+15/03/13 18:58:38 INFO mapreduce.Job:  map 58% reduce 0%
+15/03/13 18:58:39 INFO mapreduce.Job:  map 62% reduce 0%
+15/03/13 18:58:40 INFO mapreduce.Job:  map 65% reduce 0%
+15/03/13 18:58:41 INFO mapreduce.Job:  map 71% reduce 0%
+15/03/13 18:58:42 INFO mapreduce.Job:  map 73% reduce 0%
+15/03/13 18:58:52 INFO mapreduce.Job:  map 81% reduce 0%
+15/03/13 18:58:54 INFO mapreduce.Job:  map 87% reduce 0%
+15/03/13 18:58:55 INFO mapreduce.Job:  map 89% reduce 0%
+15/03/13 18:58:56 INFO mapreduce.Job:  map 91% reduce 0%
+15/03/13 18:58:58 INFO mapreduce.Job:  map 93% reduce 0%
+15/03/13 18:58:59 INFO mapreduce.Job:  map 94% reduce 0%
+15/03/13 18:59:01 INFO mapreduce.Job:  map 100% reduce 0%
+15/03/13 18:59:10 INFO mapreduce.Job:  map 100% reduce 22%
+15/03/13 18:59:13 INFO mapreduce.Job:  map 100% reduce 45%
+15/03/13 18:59:14 INFO mapreduce.Job:  map 100% reduce 67%
+15/03/13 18:59:16 INFO mapreduce.Job:  map 100% reduce 68%
+15/03/13 18:59:17 INFO mapreduce.Job:  map 100% reduce 69%
+15/03/13 18:59:20 INFO mapreduce.Job:  map 100% reduce 70%
+15/03/13 18:59:21 INFO mapreduce.Job:  map 100% reduce 79%
+15/03/13 18:59:23 INFO mapreduce.Job:  map 100% reduce 80%
+15/03/13 18:59:26 INFO mapreduce.Job:  map 100% reduce 90%
+15/03/13 18:59:29 INFO mapreduce.Job:  map 100% reduce 91%
+15/03/13 18:59:30 INFO mapreduce.Job:  map 100% reduce 100%
+15/03/13 18:59:30 INFO mapreduce.Job: Job job_1426254459012_0008 completed successfully
+15/03/13 18:59:30 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=62399890
+		FILE: Number of bytes written=126911727
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1992608189
+		HDFS: Number of bytes written=474
+		HDFS: Number of read operations=54
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=6
+	Job Counters 
+		Launched map tasks=15
+		Launched reduce tasks=3
+		Data-local map tasks=15
+		Total time spent by all maps in occupied slots (ms)=276683
+		Total time spent by all reduces in occupied slots (ms)=80275
+		Total time spent by all map tasks (ms)=276683
+		Total time spent by all reduce tasks (ms)=80275
+		Total vcore-seconds taken by all map tasks=276683
+		Total vcore-seconds taken by all reduce tasks=80275
+		Total megabyte-seconds taken by all map tasks=283323392
+		Total megabyte-seconds taken by all reduce tasks=82201600
+	Map-Reduce Framework
+		Map input records=20000000
+		Map output records=20000000
+		Map output bytes=304083939
+		Map output materialized bytes=62489373
+		Input split bytes=1830
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=25
+		Reduce shuffle bytes=62489373
+		Reduce input records=20000000
+		Reduce output records=25
+		Spilled Records=40000000
+		Shuffled Maps =45
+		Failed Shuffles=0
+		Merged Map outputs=45
+		GC time elapsed (ms)=3980
+		CPU time spent (ms)=232440
+		Physical memory (bytes) snapshot=7776526336
+		Virtual memory (bytes) snapshot=24265097216
+		Total committed heap usage (bytes)=8165785600
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=1992606359
+	File Output Format Counters 
+		Bytes Written=474
+15/03/13 18:59:30 INFO streaming.StreamJob: Output directory: /users/adverts
+hdfs@ip-172-31-7-93:/mnt$ hadoop fs -cat /users/adverts/* | sort
+Australia	381016.23
+Austria	208346.81
+Belgium	416379.79
+Brazil	198675.64
+Canada	90875.03
+Costa Rica	567544.9
+Denmark	3334.1
+Finland	141985.63
+France	146249.4
+Iceland	289447.15
+Ireland	649337.39
+Israel	476574.41
+Luxembourg	579780.41
+Mexico	729915.23
+Netherlands	30384.08
+New Zealand	644804.24
+Norway	7642.3
+Oman	262166.11
+Panama	729918.93
+Sweden	54321.99
+Switzerland	15666.87
+United Arab Emirates	700645.25
+United Kingdom	335899.92
+United States	702524.8
+Venezuela	499894.47
